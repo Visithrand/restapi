@@ -39,9 +39,10 @@ public class ChallengeController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteChallenge(@PathVariable Long id) {
+    public void deleteChallenge(@PathVariable Long id) {
         challengeService.deleteById(id);
         ResponseEntity.noContent().build();
-        return "Deleted Sucessfully with id: " + id;
+
+        
     }
 }

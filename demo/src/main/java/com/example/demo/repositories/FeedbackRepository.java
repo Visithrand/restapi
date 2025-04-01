@@ -18,5 +18,6 @@ public interface FeedbackRepository extends JpaRepository<Feedback, Long> {
     List<Feedback> findByRatingGreaterThan(int rating);
 
     // Paginated query to get feedback sorted by rating
+    @SuppressWarnings("null")
     Page<Feedback> findAll(Pageable pageable);
 }
